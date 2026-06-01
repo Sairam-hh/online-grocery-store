@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5"/>
+<meta name="description" content="FreshCart — Premium grocery delivery in minutes. Fresh produce, organic essentials and household items at your doorstep."/>
+<title>Contact · FreshCart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#22C55E;--secondary:#16A34A;--accent:#84CC16;
+  --dark:#0F172A;--light:#F8FAFC;--text:#1E293B;
+  --bg:#F8FAFC;--surface:#ffffff;--surface-2:#f1f5f9;
+  --muted:#64748b;--border:rgba(15,23,42,.08);
+  --glass:rgba(255,255,255,.65);--glass-border:rgba(255,255,255,.4);
+  --shadow:0 10px 30px -10px rgba(15,23,42,.18);
+  --shadow-lg:0 25px 60px -20px rgba(34,197,94,.35);
+  --grad:linear-gradient(135deg,#22C55E 0%,#84CC16 100%);
+  --grad-2:linear-gradient(135deg,#16A34A 0%,#22C55E 50%,#84CC16 100%);
+  --radius:18px;--radius-sm:12px;
+}
+html.dark{
+  --bg:#0F172A;--surface:#111c34;--surface-2:#1a2541;
+  --text:#E2E8F0;--muted:#94a3b8;--border:rgba(255,255,255,.08);
+  --glass:rgba(17,28,52,.55);--glass-border:rgba(255,255,255,.08);
+  --light:#0F172A;
+}
+html,body{max-width:100vw;overflow-x:hidden}
+body{
+  font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;
+  transition:background .3s ease,color .3s ease;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.container{width:100%;max-width:1240px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:'Poppins','Inter',sans-serif;font-weight:700;line-height:1.2;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,5vw,3.5rem)}
+h2{font-size:clamp(1.6rem,3.5vw,2.5rem)}
+h3{font-size:1.25rem}
+.section{padding:80px 0;position:relative}
+.section-title{text-align:center;margin-bottom:14px}
+.section-sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 50px;font-size:1.05rem}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 28px;border-radius:50px;font-weight:600;font-size:.95rem;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  position:relative;overflow:hidden;white-space:nowrap}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:var(--shadow-lg)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 30px 60px -20px rgba(34,197,94,.55)}
+.btn-ghost{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);color:var(--text)}
+.btn-ghost:hover{transform:translateY(-3px);background:var(--surface)}
+.btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+.btn-outline:hover{background:var(--primary);color:#fff}
+.btn .ripple{position:absolute;border-radius:50%;transform:scale(0);background:rgba(255,255,255,.45);
+  animation:ripple .6s linear;pointer-events:none}
+@keyframes ripple{to{transform:scale(4);opacity:0}}
+
+/* Navbar */
+.nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px);
+  background:var(--glass);border-bottom:1px solid var(--border);transition:all .3s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1240px;margin:0 auto;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.35rem}
+.logo-mark{width:38px;height:38px;border-radius:12px;background:var(--grad);
+  display:grid;place-items:center;color:#fff;box-shadow:var(--shadow-lg);font-size:1.2rem}
+.nav-links{display:none;gap:6px;align-items:center}
+.nav-links a{padding:9px 14px;border-radius:10px;font-weight:500;font-size:.95rem;transition:all .2s;position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);background:rgba(34,197,94,.08)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.icon-btn{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  background:var(--surface-2);transition:all .2s;position:relative;font-size:1.05rem}
+.icon-btn:hover{background:var(--primary);color:#fff;transform:translateY(-2px)}
+.cart-badge{position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:.65rem;
+  min-width:18px;height:18px;border-radius:9px;display:grid;place-items:center;padding:0 5px;font-weight:700}
+.nav-cta{display:none}
+@media(min-width:1024px){
+  .nav-links{display:flex}.nav-cta{display:inline-flex}
+}
+/* Hamburger */
+.burger{width:42px;height:42px;border-radius:12px;background:var(--surface-2);
+  display:grid;place-items:center;position:relative}
+@media(min-width:1024px){.burger{display:none}}
+.burger span{position:absolute;width:20px;height:2px;background:currentColor;border-radius:2px;transition:all .35s}
+.burger span:nth-child(1){transform:translateY(-6px)}
+.burger span:nth-child(3){transform:translateY(6px)}
+.burger.open span:nth-child(1){transform:rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg)}
+/* Mobile menu */
+.mobile-menu{position:fixed;inset:0;background:var(--glass);backdrop-filter:blur(30px);
+  z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  opacity:0;pointer-events:none;transform:scale(.98);transition:all .35s ease;padding:80px 24px 40px}
+.mobile-menu.open{opacity:1;pointer-events:all;transform:scale(1)}
+.mobile-menu a{font-size:1.4rem;font-weight:600;padding:10px 18px;border-radius:12px;transition:all .3s;
+  opacity:0;transform:translateY(20px)}
+.mobile-menu.open a{opacity:1;transform:translateY(0)}
+.mobile-menu.open a:nth-child(1){transition-delay:.05s}
+.mobile-menu.open a:nth-child(2){transition-delay:.1s}
+.mobile-menu.open a:nth-child(3){transition-delay:.15s}
+.mobile-menu.open a:nth-child(4){transition-delay:.2s}
+.mobile-menu.open a:nth-child(5){transition-delay:.25s}
+.mobile-menu.open a:nth-child(6){transition-delay:.3s}
+.mobile-menu.open a:nth-child(7){transition-delay:.35s}
+.mobile-menu.open a:nth-child(8){transition-delay:.4s}
+.mobile-menu a:hover{color:var(--primary);background:rgba(34,197,94,.1)}
+
+/* Footer */
+.footer{margin-top:80px;padding:60px 0 24px;background:var(--surface);border-top:1px solid var(--border)}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:760px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.foot-grid h4{margin-bottom:14px;font-size:1rem}
+.foot-grid a{display:block;color:var(--muted);font-size:.92rem;padding:5px 0;transition:color .2s}
+.foot-grid a:hover{color:var(--primary)}
+.foot-bottom{margin-top:40px;padding-top:24px;border-top:1px solid var(--border);
+  display:flex;flex-direction:column;gap:10px;text-align:center;color:var(--muted);font-size:.85rem}
+@media(min-width:600px){.foot-bottom{flex-direction:row;justify-content:space-between;text-align:left}}
+.socials{display:flex;gap:10px}
+.socials a{width:38px;height:38px;border-radius:10px;background:var(--surface-2);
+  display:grid;place-items:center;transition:all .25s}
+.socials a:hover{background:var(--grad);color:#fff;transform:translateY(-3px)}
+
+/* Toasts */
+.toast-wrap{position:fixed;top:90px;right:20px;z-index:200;display:flex;flex-direction:column;gap:10px;max-width:calc(100vw - 40px)}
+.toast{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);
+  padding:14px 18px;border-radius:12px;box-shadow:var(--shadow);min-width:260px;
+  animation:toastIn .35s ease;display:flex;gap:10px;align-items:center;font-size:.92rem;font-weight:500}
+.toast.error{border-left-color:#ef4444}
+.toast.info{border-left-color:#3b82f6}
+@keyframes toastIn{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+
+/* Cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:24px;transition:all .35s ease}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(34,197,94,.3)}
+
+/* Loader */
+.page-loader{position:fixed;inset:0;background:var(--bg);z-index:9999;display:grid;place-items:center;
+  transition:opacity .5s ease}
+.page-loader.hide{opacity:0;pointer-events:none}
+.loader-ring{width:60px;height:60px;border-radius:50%;border:4px solid var(--surface-2);
+  border-top-color:var(--primary);animation:spin .8s linear infinite}
+
+/* Forms */
+.input,.select,.textarea{width:100%;padding:14px 16px;border-radius:12px;border:1.5px solid var(--border);
+  background:var(--surface);color:var(--text);font-family:inherit;font-size:.95rem;transition:all .2s}
+.input:focus,.select:focus,.textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(34,197,94,.12)}
+.label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--text)}
+.field{margin-bottom:16px}
+
+.cnt-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:900px){.cnt-grid{grid-template-columns:1.3fr 1fr}}
+.cnt-card{padding:30px}
+.info-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
+.info-item:last-child{border:none}
+.info-icon{width:44px;height:44px;border-radius:12px;background:var(--grad);color:#fff;display:grid;place-items:center;flex-shrink:0}
+.locs{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:760px){.locs{grid-template-columns:repeat(3,1fr)}}
+.loc{padding:20px}
+</style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-ring"></div></div>
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="logo"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></a>
+  <div class="nav-links"><a href="index.html" class="">Home</a><a href="about.html" class="">About</a><a href="services.html" class="">Services</a><a href="products.html" class="">Products</a><a href="contact.html" class="active">Contact</a></div>
+  <div class="nav-actions">
+    <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme"><span id="themeIcon">🌙</span></button>
+    <a href="cart.html" class="icon-btn" aria-label="Cart">🛒<span class="cart-badge" id="cartBadge" style="display:none">0</span></a>
+    <a href="login.html" class="btn btn-ghost nav-cta" style="padding:10px 18px;font-size:.88rem">Login</a>
+    <a href="signup.html" class="btn btn-primary nav-cta" style="padding:10px 18px;font-size:.88rem">Sign Up</a>
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</div></nav>
+<div class="mobile-menu" id="mmenu">
+  <a href="index.html" onclick="toggleMenu()">Home</a><a href="about.html" onclick="toggleMenu()">About</a><a href="services.html" onclick="toggleMenu()">Services</a><a href="products.html" onclick="toggleMenu()">Products</a><a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="cart.html" onclick="toggleMenu()">Cart</a>
+  <a href="login.html" onclick="toggleMenu()">Login</a>
+  <a href="signup.html" onclick="toggleMenu()">Sign Up</a>
+</div>
+
+
+<section class="about-hero">
+  <div class="container">
+    <h1>Get in <span class="grad-text">Touch</span></h1>
+    <p style="max-width:560px;margin:18px auto 0;color:var(--muted)">We're here 24/7 to help — drop us a line and we'll get back fast.</p>
+  </div>
+</section>
+
+<section class="section"><div class="container">
+  <div class="cnt-grid">
+    <div class="card cnt-card reveal">
+      <h2>Send us a <span class="grad-text">message</span></h2>
+      <form id="cf" style="margin-top:20px">
+        <div class="field"><label class="label">Name</label><input class="input" id="cName" required/></div>
+        <div class="field"><label class="label">Email</label><input class="input" type="email" id="cEmail" required/></div>
+        <div class="field"><label class="label">Subject</label><input class="input" id="cSub" required/></div>
+        <div class="field"><label class="label">Message</label><textarea class="textarea" id="cMsg" rows="5" required></textarea></div>
+        <button class="btn btn-primary" type="submit" style="width:100%">Send Message →</button>
+      </form>
+    </div>
+    <div class="card cnt-card reveal">
+      <h3>Contact info</h3>
+      <div class="info-item"><div class="info-icon">📞</div><div><strong>+1 (555) 123-4567</strong><div style="color:var(--muted);font-size:.85rem">24/7 support line</div></div></div>
+      <div class="info-item"><div class="info-icon">✉️</div><div><strong>hello@freshcart.com</strong><div style="color:var(--muted);font-size:.85rem">Reply within 2 hours</div></div></div>
+      <div class="info-item"><div class="info-icon">📍</div><div><strong>HQ — San Francisco</strong><div style="color:var(--muted);font-size:.85rem">123 Fresh Ave, CA 94103</div></div></div>
+      <div class="info-item"><div class="info-icon">💬</div><div><strong>Live chat</strong><div style="color:var(--muted);font-size:.85rem">Available 24/7 in the app</div></div></div>
+      <div style="margin-top:16px"><h4 style="margin-bottom:10px">Follow us</h4>
+        <div class="socials">
+          <a href="" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="" aria-label="X">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:0"><div class="container">
+  <h2 class="section-title reveal">Our <span class="grad-text">Locations</span></h2>
+  <div class="locs" style="margin-top:30px">
+    <div class="loc card reveal"><h3>San Francisco</h3><p style="color:var(--muted);font-size:.9rem;margin-top:6px">123 Fresh Avenue, CA 94103</p></div>
+    <div class="loc card reveal"><h3>New York</h3><p style="color:var(--muted);font-size:.9rem;margin-top:6px">456 Market Street, NY 10001</p></div>
+    <div class="loc card reveal"><h3>London</h3><p style="color:var(--muted);font-size:.9rem;margin-top:6px">78 Borough Lane, SE1 1QQ</p></div>
+  </div>
+</div></section>
+
+
+<footer class="footer"><div class="container">
+  <div class="foot-grid">
+    <div>
+      <div class="logo" style="margin-bottom:14px"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></div>
+      <p style="color:var(--muted);max-width:340px;font-size:.92rem">Premium grocery delivery in minutes. Fresh, organic and handpicked — delivered to your doorstep.</p>
+      <div class="socials" style="margin-top:18px">
+        
+        <a href="" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="" aria-label="X">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div><h4>Shop</h4><a href="products.html">All Products</a><a href="products.html">Categories</a><a href="products.html">Offers</a><a href="cart.html">Cart</a></div>
+    <div><h4>Company</h4><a href="about.html">About Us</a><a href="services.html">Services</a><a href="contact.html">Contact</a><a href="#">Careers</a></div>
+    <div><h4>Support</h4><a href="contact.html">Help Center</a><a href="#">FAQ</a><a href="#">Shipping</a><a href="#">Returns</a></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 FreshCart. All rights reserved.</span>
+    <span>Privacy · Terms · Cookies</span>
+  </div>
+</div></footer>
+
+<script>
+// Theme
+(function(){
+  const saved=localStorage.getItem('theme');
+  if(saved==='dark'||(!saved&&matchMedia('(prefers-color-scheme:dark)').matches))
+    document.documentElement.classList.add('dark');
+})();
+function toggleTheme(){
+  const d=document.documentElement.classList.toggle('dark');
+  localStorage.setItem('theme',d?'dark':'light');
+  const i=document.getElementById('themeIcon');if(i)i.textContent=d?'☀️':'🌙';
+}
+// Cart
+function getCart(){try{return JSON.parse(localStorage.getItem('cart')||'[]')}catch{return[]}}
+function setCart(c){localStorage.setItem('cart',JSON.stringify(c));updateCartBadge()}
+function updateCartBadge(){const b=document.getElementById('cartBadge');if(!b)return;
+  const c=getCart(),n=c.reduce((a,i)=>a+i.qty,0);b.textContent=n;b.style.display=n?'grid':'none'}
+function addToCart(id,name,price,img){
+  const c=getCart();const f=c.find(x=>x.id===id);
+  if(f)f.qty++;else c.push({id,name,price,img,qty:1});
+  setCart(c);toast('✓ Added to cart');
+}
+function removeFromCart(id){setCart(getCart().filter(x=>x.id!==id))}
+function updateQty(id,d){const c=getCart();const f=c.find(x=>x.id===id);if(f){f.qty=Math.max(1,f.qty+d);setCart(c)}}
+// Wishlist
+function getWish(){try{return JSON.parse(localStorage.getItem('wish')||'[]')}catch{return[]}}
+function toggleWish(id){const w=getWish();const i=w.indexOf(id);
+  if(i>-1){w.splice(i,1);toast('Removed from wishlist','info')}else{w.push(id);toast('♥ Added to wishlist')}
+  localStorage.setItem('wish',JSON.stringify(w));
+  document.querySelectorAll('[data-wish="'+id+'"]').forEach(el=>el.classList.toggle('active',w.includes(id)));
+}
+// Toasts
+function toast(msg,type){
+  let w=document.querySelector('.toast-wrap');
+  if(!w){w=document.createElement('div');w.className='toast-wrap';document.body.appendChild(w)}
+  const t=document.createElement('div');t.className='toast '+(type||'');t.textContent=msg;
+  w.appendChild(t);setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(30px)';setTimeout(()=>t.remove(),400)},2800);
+}
+// Mobile menu
+function toggleMenu(){
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('mmenu').classList.toggle('open');
+  document.body.style.overflow=document.getElementById('mmenu').classList.contains('open')?'hidden':'';
+}
+// Reveal
+function initReveal(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+// Counters
+function initCounters(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;io.unobserve(e.target);
+    const el=e.target,to=+el.dataset.count,dur=1600,start=performance.now();
+    function tick(t){const p=Math.min(1,(t-start)/dur);el.textContent=Math.floor(p*to).toLocaleString()+(el.dataset.suffix||'');if(p<1)requestAnimationFrame(tick)}
+    requestAnimationFrame(tick);
+  }),{threshold:.4});
+  document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+}
+// Ripple
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.btn');if(!b)return;
+  const r=b.getBoundingClientRect(),s=Math.max(r.width,r.height),x=e.clientX-r.left-s/2,y=e.clientY-r.top-s/2;
+  const sp=document.createElement('span');sp.className='ripple';
+  sp.style.cssText=`width:${s}px;height:${s}px;left:${x}px;top:${y}px`;b.appendChild(sp);setTimeout(()=>sp.remove(),650);
+});
+// Loader
+window.addEventListener('load',()=>{
+  const l=document.querySelector('.page-loader');if(l){setTimeout(()=>{l.classList.add('hide');setTimeout(()=>l.remove(),500)},250)}
+  updateCartBadge();initReveal();initCounters();
+  const ti=document.getElementById('themeIcon');if(ti)ti.textContent=document.documentElement.classList.contains('dark')?'☀️':'🌙';
+});
+
+document.getElementById('cf').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=cName.value.trim(),em=cEmail.value.trim(),s=cSub.value.trim(),m=cMsg.value.trim();
+  if(!n||!em||!s||!m){toast('All fields required','error');return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){toast('Invalid email','error');return}
+  toast('✓ Message sent! We\'ll reply soon.');e.target.reset();
+});
+</script>
+</body></html>
