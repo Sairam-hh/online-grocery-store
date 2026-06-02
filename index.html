@@ -112,7 +112,7 @@ h3{font-size:1.25rem}
 .mobile-menu a:hover{color:var(--primary);background:rgba(34,197,94,.1)}
 
 /* Footer */
-.footer{margin-top:80px;padding:60px 0 24px;background:var(--surface);border-top:1px solid var(--border)}
+.footer{margin-top:10px;padding:60px 0 24px;background:var(--surface);border-top:1px solid var(--border)}
 .foot-grid{display:grid;grid-template-columns:1fr;gap:32px}
 @media(min-width:760px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
 .foot-grid h4{margin-bottom:14px;font-size:1rem}
@@ -182,7 +182,7 @@ html.dark .prod-img{background:linear-gradient(135deg,#14532d,#365314)}
 .add-btn{width:38px;height:38px;border-radius:12px;background:var(--grad);color:#fff;
   font-size:1.3rem;font-weight:700;display:grid;place-items:center;transition:all .25s;box-shadow:var(--shadow)}
 .add-btn:hover{transform:translateY(-3px) rotate(90deg)}
-.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 
 .hero{position:relative;min-height:90vh;display:grid;place-items:center;overflow:hidden;padding:60px 20px;
   background:radial-gradient(ellipse at top left,rgba(34,197,94,.25),transparent 50%),
@@ -262,13 +262,22 @@ html.dark .flash{background:linear-gradient(135deg,#451a03,#78350f);color:#fde68
 .news{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:40px 24px;text-align:center}
 .news-form{display:flex;gap:10px;max-width:480px;margin:20px auto 0;flex-direction:column}
 @media(min-width:500px){.news-form{flex-direction:row}}
+
+.logo-img{
+  width:120px;
+  height:50px;
+  border-radius: 10px;
+}
 </style>
 </head>
 <body>
 
 <div class="page-loader"><div class="loader-ring"></div></div>
 <nav class="nav"><div class="nav-inner">
-  <a href="index.html" class="logo"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></a>
+  <!-- <a href="index.html" class="logo"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></a> -->
+   <a class="nav-logo" href="index.html">
+      <img src="./assests/stackly-green-color-logo.webp" alt="grocery store Logo" class="logo-img">
+    </a>
   <div class="nav-links"><a href="index.html" class="active">Home</a><a href="about.html" class="">About</a><a href="services.html" class="">Services</a><a href="products.html" class="">Products</a><a href="contact.html" class="">Contact</a></div>
   <div class="nav-actions">
     <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme"><span id="themeIcon">🌙</span></button>
@@ -410,8 +419,11 @@ html.dark .flash{background:linear-gradient(135deg,#451a03,#78350f);color:#fde68
 <footer class="footer"><div class="container">
   <div class="foot-grid">
     <div>
-      <div class="logo" style="margin-bottom:14px"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></div>
-      <p style="color:var(--muted);max-width:340px;font-size:.92rem">Premium grocery delivery in minutes. Fresh, organic and handpicked — delivered to your doorstep.</p>
+      <!-- <div class="logo" style="margin-bottom:14px"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></div> -->
+       <a class="nav-logo" href="index.html">
+        <img src="./assests/stackly-green-color-logo.webp" alt="grocery store Logo" class="logo-img">
+      </a>
+        <p style="color:var(--muted);max-width:340px;font-size:.92rem">Premium grocery delivery in minutes. Fresh, organic and handpicked — delivered to your doorstep.</p>
       <div class="socials" style="margin-top:18px">
         <a href="error.html" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>

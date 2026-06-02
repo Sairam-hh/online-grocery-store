@@ -180,13 +180,21 @@ html.dark .ci-img{background:linear-gradient(135deg,#14532d,#365314)}
 .sum-row.total{font-size:1.2rem;font-weight:700;color:var(--text);border-top:1px solid var(--border);margin-top:8px;padding-top:14px}
 .coupon{display:flex;gap:8px;margin:14px 0}
 .empty{text-align:center;padding:80px 20px;background:var(--surface);border:1px solid var(--border);border-radius:18px}
+.logo-img{
+  width:120px;
+  height:50px;
+  border-radius: 10px;
+}
 </style>
 </head>
 <body>
 
 <div class="page-loader"><div class="loader-ring"></div></div>
 <nav class="nav"><div class="nav-inner">
-  <a href="index.html" class="logo"><span class="logo-mark">🥬</span><span class="grad-text">FreshCart</span></a>
+  <!-- <a href="index.html" class="logo"><span class="logo-mark">🥬</span><span class="grad-text">FreshCart</span></a> -->
+   <a class="nav-logo" href="index.html">
+    <img src="./assests/stackly-green-color-logo.webp" alt="grocery store Logo" class="logo-img">
+  </a>
   <div class="nav-links"><a href="index.html" class="">Home</a><a href="about.html" class="">About</a><a href="services.html" class="">Services</a><a href="products.html" class="">Products</a><a href="contact.html" class="">Contact</a></div>
   <div class="nav-actions">
     <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme"><span id="themeIcon">🌙</span></button>
@@ -214,7 +222,10 @@ html.dark .ci-img{background:linear-gradient(135deg,#14532d,#365314)}
 <footer class="footer"><div class="container">
   <div class="foot-grid">
     <div>
-      <div class="logo" style="margin-bottom:14px"><span class="logo-mark">🥬</span><span class="grad-text">FreshCart</span></div>
+      <!-- <div class="logo" style="margin-bottom:14px"><span class="logo-mark">🥬</span><span class="grad-text">FreshCart</span></div> -->
+       <a class="nav-logo" href="index.html">
+        <img src="./assests/stackly-green-color-logo.webp" alt="grocery store Logo" class="logo-img">
+      </a>
       <p style="color:var(--muted);max-width:340px;font-size:.92rem">Premium grocery delivery in minutes. Fresh, organic and handpicked — delivered to your doorstep.</p>
       <div class="socials" style="margin-top:18px">
         

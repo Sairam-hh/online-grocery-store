@@ -170,13 +170,21 @@ h3{font-size:1.25rem}
 .locs{display:grid;grid-template-columns:1fr;gap:14px}
 @media(min-width:760px){.locs{grid-template-columns:repeat(3,1fr)}}
 .loc{padding:20px}
+.logo-img{
+  width:120px;
+  height:50px;
+  border-radius: 10px;
+}
 </style>
 </head>
 <body>
 
 <div class="page-loader"><div class="loader-ring"></div></div>
 <nav class="nav"><div class="nav-inner">
-  <a href="index.html" class="logo"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></a>
+  <!-- <a href="index.html" class="logo"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></a> -->
+   <a class="nav-logo" href="index.html">
+    <img src="./assests/stackly-green-color-logo.webp" alt="grocery store Logo" class="logo-img">
+  </a>
   <div class="nav-links"><a href="index.html" class="">Home</a><a href="about.html" class="">About</a><a href="services.html" class="">Services</a><a href="products.html" class="">Products</a><a href="contact.html" class="active">Contact</a></div>
   <div class="nav-actions">
     <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme"><span id="themeIcon">🌙</span></button>
@@ -255,7 +263,10 @@ h3{font-size:1.25rem}
 <footer class="footer"><div class="container">
   <div class="foot-grid">
     <div>
-      <div class="logo" style="margin-bottom:14px"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></div>
+      <!-- <div class="logo" style="margin-bottom:14px"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></div> -->
+       <a class="nav-logo" href="index.html">
+        <img src="./assests/stackly-green-color-logo.webp" alt="grocery store Logo" class="logo-img">
+      </a>
       <p style="color:var(--muted);max-width:340px;font-size:.92rem">Premium grocery delivery in minutes. Fresh, organic and handpicked — delivered to your doorstep.</p>
       <div class="socials" style="margin-top:18px">
         
