@@ -362,7 +362,7 @@ html.dark .flash{background:linear-gradient(135deg,#451a03,#78350f);color:#fde68
 </div></section>
 
 <section class="section"><div class="container">
-  <h2 class="section-title reveal">Why Choose <span class="grad-text">FreshCart</span></h2>
+  <h2 class="section-title reveal">Why Choose <span class="grad-text">Stackly</span></h2>
   <p class="section-sub reveal">Experience the difference of premium grocery delivery</p>
   <div class="feat-grid">
     <div class="feat card reveal"><div class="feat-icon">🚀</div><h3>10-Min Delivery</h3><p style="color:var(--muted);font-size:.9rem;margin-top:8px">Lightning-fast delivery from our dark stores near you.</p></div>
@@ -395,7 +395,7 @@ html.dark .flash{background:linear-gradient(135deg,#451a03,#78350f);color:#fde68
 
 <section class="section" style="padding-top:0"><div class="container">
   <div class="app reveal">
-    <h2>Get the FreshCart App</h2>
+    <h2>Get the Stackly App</h2>
     <p>Order groceries on the go with exclusive app-only deals, faster checkout and real-time tracking.</p>
     <div class="app-btns">
       <a href="error.html" class="app-btn">🍎 App Store</a>
@@ -408,7 +408,7 @@ html.dark .flash{background:linear-gradient(135deg,#451a03,#78350f);color:#fde68
   <div class="news reveal">
     <h2>Join Our <span class="grad-text">Newsletter</span></h2>
     <p style="color:var(--muted);margin-top:10px">Get $10 off your first order + weekly deals.</p>
-    <form class="news-form" onsubmit="event.preventDefault();toast('🎉 Subscribed! Check your inbox.');this.reset()">
+    <form class="news-form" onsubmit="newsletterSubmit(event,this)">
       <input class="input" type="email" required placeholder="Enter your email"/>
       <button class="btn btn-primary" type="submit">Subscribe</button>
     </form>
@@ -451,7 +451,7 @@ html.dark .flash{background:linear-gradient(135deg,#451a03,#78350f);color:#fde68
     <div><h4>Support</h4><a href="error.html">Help Center</a><a href="error.html">FAQ</a><a href="error.html">Shipping</a><a href="error.html">Returns</a></div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 FreshCart. All rights reserved.</span>
+    <span>© 2026 stackly. All rights reserved.</span>
     <span>Privacy · Terms · Cookies</span>
   </div>
 </div></footer>
@@ -585,5 +585,27 @@ setInterval(()=>{total=total>0?total-1:0;
   if(eh){eh.textContent=h;em.textContent=m;es.textContent=s}
 },1000);
 setTimeout(initReveal,50);
+
+function newsletterSubmit(event, form){
+  event.preventDefault();
+
+  const emailInput = form.querySelector('input[type="email"]');
+  const email = emailInput.value.trim();
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if(!email){
+    toast('❌ Please enter your email address','error');
+    return;
+  }
+
+  if(!emailRegex.test(email)){
+    toast('❌ Please enter a valid email address','error');
+    return;
+  }
+
+  toast('🎉 Subscribed! Check your inbox.');
+  form.reset();
+}
 </script>
 </body></html>

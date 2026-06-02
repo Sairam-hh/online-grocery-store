@@ -240,7 +240,7 @@ h3{font-size:1.25rem}
   </aside>
   <main class="dmain">
     <div class="dbanner">
-      <h2>Admin Panel</h2>
+      <h2 id="adminName">Admin Panel</h2>
       <p>Manage products, orders, customers and reports.</p>
     </div>
     <div class="stat-grid">
@@ -317,7 +317,7 @@ h3{font-size:1.25rem}
     <div><h4>Support</h4><a href="error.html">Help Center</a><a href="error.html">FAQ</a><a href="error.html">Shipping</a><a href="error.html">Returns</a></div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 FreshCart. All rights reserved.</span>
+    <span>© 2026 stackly. All rights reserved.</span>
     <span>Privacy · Terms · Cookies</span>
   </div>
 </div></footer>
@@ -393,6 +393,12 @@ window.addEventListener('load',()=>{
   const l=document.querySelector('.page-loader');if(l){setTimeout(()=>{l.classList.add('hide');setTimeout(()=>l.remove(),500)},250)}
   updateCartBadge();initReveal();initCounters();
   const ti=document.getElementById('themeIcon');if(ti)ti.textContent=document.documentElement.classList.contains('dark')?'☀️':'🌙';
+  const auth = JSON.parse(localStorage.getItem('freshcart_auth') || '{}');
+
+if(auth.name){
+  document.getElementById('adminName').textContent =
+    `Administrator:, ${auth.name} 👋`;
+}
 });
 </script>
 </body></html>
