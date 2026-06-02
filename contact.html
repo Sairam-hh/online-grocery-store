@@ -378,6 +378,10 @@ document.getElementById('cf').addEventListener('submit',e=>{
   e.preventDefault();
   const n=cName.value.trim(),em=cEmail.value.trim(),s=cSub.value.trim(),m=cMsg.value.trim();
   if(!n||!em||!s||!m){toast('All fields required','error');return}
+  if(!/^[A-Za-z\s]+$/.test(n)){
+  toast('Name should contain only letters','error');
+  return;
+}
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){toast('Invalid email','error');return}
   toast('✓ Message sent! We\'ll reply soon.');e.target.reset();
 });
