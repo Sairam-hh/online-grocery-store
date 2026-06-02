@@ -190,6 +190,44 @@ h3{font-size:1.25rem}
   height:50px;
   border-radius: 10px;
 }
+
+.g-item{
+  aspect-ratio:1;
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  padding:20px;
+  color:#fff;
+  text-align:left;
+}
+
+.g-item::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.2)
+  );
+}
+
+.g-item div{
+  position:relative;
+  z-index:2;
+}
+
+.g-item h4{
+  font-size:1rem;
+  margin-bottom:4px;
+}
+
+.g-item p{
+  font-size:.82rem;
+  opacity:.9;
+}
 </style>
 </head>
 <body>
@@ -287,18 +325,77 @@ h3{font-size:1.25rem}
   <h2 class="section-title reveal">Inside Our <span class="grad-text">Warehouses</span></h2>
   <p class="section-sub reveal">Built for freshness, speed and safety</p>
   <div class="gallery">
-    <div class="g-item reveal">📦</div><div class="g-item reveal">🥦</div>
-    <div class="g-item reveal">🚚</div><div class="g-item reveal">🍎</div>
-    <div class="g-item reveal">❄️</div><div class="g-item reveal">🥬</div>
-    <div class="g-item reveal">📱</div><div class="g-item reveal">🛒</div>
+  <div class="g-item reveal">
+    <div>
+      <div>📦</div>
+      <h4>Smart Packaging</h4>
+      <p>Secure order packing</p>
+    </div>
   </div>
-</div></section>
+
+  <div class="g-item reveal">
+    <div>
+      <div>🥦</div>
+      <h4>Fresh Produce</h4>
+      <p>Daily quality inspection</p>
+    </div>
+  </div>
+
+  <div class="g-item reveal">
+    <div>
+      <div>🚚</div>
+      <h4>Fast Dispatch</h4>
+      <p>Quick order processing</p>
+    </div>
+  </div>
+
+  <div class="g-item reveal">
+    <div>
+      <div>🍎</div>
+      <h4>Premium Fruits</h4>
+      <p>Handpicked freshness</p>
+    </div>
+  </div>
+
+  <div class="g-item reveal">
+    <div>
+      <div>❄️</div>
+      <h4>Cold Storage</h4>
+      <p>Temperature-controlled facility</p>
+    </div>
+  </div>
+
+  <div class="g-item reveal">
+    <div>
+      <div>🥬</div>
+      <h4>Inventory Management</h4>
+      <p>Organized stock handling</p>
+    </div>
+  </div>
+
+  <div class="g-item reveal">
+    <div>
+      <div>📱</div>
+      <h4>Digital Operations</h4>
+      <p>Technology-driven logistics</p>
+    </div>
+  </div>
+
+  <div class="g-item reveal">
+    <div>
+      <div>🛒</div>
+      <h4>Order Fulfillment</h4>
+      <p>Efficient delivery workflow</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 
 
 <footer class="footer"><div class="container">
   <div class="foot-grid">
     <div>
-        <!-- <div class="logo" style="margin-bottom:14px"><span class="logo-mark">🥬</span><span class="grad-text">Stackly</span></div> -->
        <a class="nav-logo" href="index.html">
         <img src="./assests/stackly-green-color-logo.webp" alt="grocery store Logo" class="logo-img">
       </a>
